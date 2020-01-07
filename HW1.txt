@@ -1,0 +1,42 @@
+1) 
+bool() возвращает False, если:
+	1. На вход подан False (или выражение, принимающее такое значение, например 2=3) 
+	2. На вход подан None
+	3. На вход подана пустая последовательность (), [], '', "", {}
+	4. На вход подан ноль, в любом виде: 0, 0.0 и т.д.
+  Во всех остальных случаях вернётся True
+
+
+
+2)
+Python 2:
+raw_input() принимает именно то, что ввел пользователь, и передает его обратно в виде строки.
+input() сначала принимает raw_input() , а затем выполняет eval() на нем.
+Главное отличие состоит в том, что input() ожидает синтаксически корректного оператора python, а raw_input() - нет.
+
+Python 3:
+raw_input() был переименован в input() так что теперь input() возвращает строку.
+Старый input() был удален.
+Но его можно сделать вручную с помощью eval(input()).
+
+3)pep-3105
+Оператор print был заменён функцией print(),
+с именованными аргументами для замены большей части синтаксиса старого оператора print.
+Особенности:
+Python2: print "The answer is", 2*2
+Python3: print("The answer is", 2*2)
+---
+Python2: print x,           # Запятая в конце подавляет перевод строки
+Python3: print(x, end=" ")  # Добавляет пробел вместо перевода строки
+---
+Python2: print              # Печатает перевод строки
+Python3: print()            # Нужно вызвать функцию!
+---
+Python2: print ("Hello", "world")      # Печатает ('Hello', 'world')
+Python3: print ("Hello", "world")      # Печатает Hello world
+---
+Python2: print(type('default string ')) #<class 'str'> ASCII
+	 print(type(b'string with b ')) #<class 'str'>
+
+Python3: print(type('default string ')) #<class 'str'> Unicode
+	 print(type(b'string with b ')) #<class 'bytes'>
