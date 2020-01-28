@@ -3,7 +3,7 @@ while TextString != '1':
     print("Введите текст, содержащий любые слова, слоги, числа или их комбинации,"
           " разделенные пробелом (для выхода введите 1):")
     TextString = input()
-    TextString.lower()
+    TextString = TextString.lower()
     TextList = TextString.split(' ')
     TextDict = dict()
     for one in TextList:
