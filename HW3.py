@@ -1,8 +1,10 @@
 TextString = ''
-while TextString != '1':
+while True:
     print("Введите текст, содержащий любые слова, слоги, числа или их комбинации,"
           " разделенные пробелом (для выхода введите 1):")
     TextString = input()
+    if TextString == '1':
+        break
     TextString = TextString.lower()
     TextList = TextString.split(' ')
     TextDict = dict()
